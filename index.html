@@ -6,26 +6,34 @@
     <link href="http://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css">
 </head>
 	<body>
-		<section id="primary-section">
-			<h1>Turnt</h1>
-			<div class="containerForArrows">
-				<svg id="yesArrow" width="160" height="100" viewBox="0 0 160 100">
-					<polygon points="0,100 160,100 80,0"/>
-				</svg>
-				<div class="currentOpinion">
-					5
-				</div>
-				<svg id="noArrow" width="160" height="100" viewBox="0 0 160 100">
-					<polygon points="0,0 160,0 80,100"/>
-				</svg>
-			</div>
+		<section id="input">
+            <div class="content">
+                <header>
+                    <h1>Room</h1>
+                    <h2>Turn it up or down?</h2>
+                </header>
+                <div class="arrow-container">
+                    <svg id="up-arrow" width="160" height="100" viewBox="0 0 160 100">
+                        <polygon points="0,100 160,100 80,0"/>
+                    </svg>
+                    <div id="room-opinion">
+                        5
+                    </div>
+                    <svg id="down-arrow" width="160" height="100" viewBox="0 0 160 100">
+                        <polygon points="0,0 160,0 80,100"/>
+                    </svg>
+                </div>
+            </div>
 		</section>
-		<section id="tertiary-section">
+		<section id="graph">
 			<canvas id="myCanvas" width="160" height="50">
 			</canvas>
-			<small>
-				Turnt is a project for hyperlocal upvoting blah blah blah. Fork us on github.
-			</small>
 		</section>
+        <footer>
+            <small>
+                Room is an app for hyperlocal upvoting blah blah blah. Fork us on
+                <a href="https://github.com/jake-sl/room" target="_blank">Github</a>.
+            </small>
+        </footer>
 	</body>
 </html>

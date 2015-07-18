@@ -1,6 +1,7 @@
-* {
-    margin: 0;
-    padding:0;
+*
+{
+    margin: 0em;
+    padding: 0em;
     box-sizing: border-box;
 }
 
@@ -9,61 +10,97 @@ html, body
 	height: 100%;
 }
 
-#primary-section
+section#input
 {
-	min-height: 100%;
+    height: 100%;
+	min-height: 27em;
+    position: relative;
 }
 
-h1 {
-    text-align: center;
-    font-family: 'Roboto Slab', serif;
+.content
+{
+    top: 0em;
+    left: 0em;
+    right: 0em;
+    bottom: 0em;
+    margin: auto;
+    width: 17em;
+    height: 27em;
+    position: absolute;
+}
+
+header
+{
+    margin: 1em;
+}
+
+header > h1
+{
     font-size: 4em;
+    text-align: center;
+    font-family: "Roboto Slab", serif;
 }
 
-.containerForArrows {
-    margin: 1em auto;
+header > h2
+{
+    font-size: 1em;
+    text-align: center;
+    font-weight: normal;
+    font-family: "Roboto Slab", serif;
+}
+
+.arrow-container
+{
     width: 100px;
+    margin: auto;
 }
 
-svg{
+#room-opinion
+{
+    font-size: 4em;
+    text-align: center;
+    font-family: "Roboto Slab", serif;
+}
+
+svg
+{
     width: 100%;
     height: auto;
 }
 
-#yesArrow {
+svg#up-arrow
+{
 	fill: #801A15;
 }
 
-#noArrow {
+svg#down-arrow
+{
 	fill: #261758;
 }
 
-#yesArrow:hover {
+svg#up-arrow:hover
+{
 	fill: #D46F6A;
-}
-
-#noArrow:hover {
-	fill: #605292;
-}
-
-#yesArrow:hover, #noArrow:hover{
     cursor: pointer;
 }
 
-.currentOpinion{
-    text-align: center;
-    font-size: 4em;
-    font-family: 'Roboto Slab', serif;
+svg#down-arrow:hover
+{
+	fill: #605292;
+    cursor: pointer;
 }
 
-#myCanvas {
+canvas
+{
     width: 100%;
     background-color: #eee;
 }
    
-small {
-    text-align: center;
-    margin: 1em auto;
+small
+{
     width: 160px;
     display: block;
+    margin: 1em auto;
+    
+    text-align: center;
 }
