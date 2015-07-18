@@ -1,0 +1,70 @@
+*{
+margin: 0;
+padding:0;
+box-sizing: border-box;
+}
+
+html, body
+{
+	height: 100%;
+}
+
+#primary-section
+{
+	min-height: 100%;
+}
+
+h1{
+text-align: center;
+font-family: 'Roboto Slab', serif;
+font-size: 4em;
+}
+
+.container{
+   margin: 1em auto;
+   width: 100px;
+}
+
+svg{
+	width: 100%;
+	height: auto;
+}
+
+#yesArrow {
+	fill: #801A15;
+}
+
+#noArrow {
+	fill: #261758;
+}
+
+#yesArrow:hover {
+	fill: #D46F6A;
+}
+
+#noArrow:hover {
+	fill: #605292;
+}
+
+#yesArrow:hover, #noArrow:hover{
+   cursor: pointer;
+}
+
+.currentOpinion{
+   text-align: center;
+   font-size: 4em;
+   font-family: 'Roboto Slab', serif;
+}
+
+#myCanvas {
+   width: 100%;
+   background-color: #eee;
+}
+   
+small{
+  text-align: center;
+  margin: 1em auto;
+  width: 160px;
+  display: block;
+}
+
