@@ -90,9 +90,10 @@ svg#down-arrow:hover
     cursor: pointer;
 }
 
-canvas
+section#graph
 {
     width: 100%;
+    height: 12em;
     background-color: #eee;
 }
    
