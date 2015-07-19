@@ -64,8 +64,7 @@ function initialize() {
     }));
     marker.setPosition(place.geometry.location);
     marker.setVisible(true);
-    addNewData();
-    recalculateGlobalScore();
+
 
 
 
@@ -80,7 +79,8 @@ function initialize() {
 
     infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
     infowindow.open(map, marker);
-    window.placeID = place.name;
+    window.placeID = place.name
+    recalculateGlobalScore()
 
 
   });
@@ -138,7 +138,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
     myDataRef
       .orderByChild('venue')
-      .equalTo(window.placeID)
       .limitToLast(100)
       .on('child_added', addNewData)
 
@@ -150,9 +149,10 @@ google.maps.event.addDomListener(window, 'load', initialize);
     }
 
     function recalculateGlobalScore(newScore) {
-      total = votes.reduce( function(a, b) { return a + b } )
-      globalAverage = total / votes.length;
-      weightedAverage = globalAverage*100;
-      weightedRoundedAverage = parseInt(weightedAverage)
-      document.getElementById("room-opinion").innerHTML = weightedRoundedAverage;
+      var myVotes = votes.filter( function(a) { return a.venue === window.placeID } )
+        , total = myVotes.reduce( function(a, b) { return a + b } )
+        , avg = total / myVotes.length
+        , weightedAverage = (avg * 100)|0
+
+      document.getElementById("room-opinion").innerHTML = weightedAverage
     }
