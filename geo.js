@@ -143,16 +143,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
     function addNewData(snapshot)  {
       var voteJSON = snapshot.val()
-        , voteScore = parseInt(voteJSON.vote, 10)
-      votes.push(voteScore)
+      votes.push(voteJSON)
       recalculateGlobalScore()
     }
 
-    function recalculateGlobalScore(newScore) {
+    function recalculateGlobalScore() {
       var myVotes = votes.filter( function(a) { return a.venue === window.placeID } )
-        , total = myVotes.reduce( function(a, b) { return a + b } )
-        , avg = total / myVotes.length
-        , weightedAverage = (avg * 100)|0
+      , total = myVotes.reduce( function(sum, json) { return sum + json.vote }, 0 )
+      , avg = total / myVotes.length
+      , weightedAverage = (avg * 100)|0
 
       document.getElementById("room-opinion").innerHTML = weightedAverage
     }
